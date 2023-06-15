@@ -19,8 +19,8 @@ with Data:
    """)
    st.write('Proyek Sain Data')
    st.text("""
-            1. Nuskhatul Haqqi 200411100034 
-            2. Amanda Caecilia 200411100090   
+            1. Muhammad Arbiansyafa Siswanto 200411100195 
+            2. Bachtiar Dwi Yusril R. 200411100118   
             """)
    st.subheader('Tentang Dataset')
    st.write ("""
