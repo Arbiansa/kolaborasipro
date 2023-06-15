@@ -15,7 +15,7 @@ Data,Preproses,Modelling,Implementasi = st.tabs(['Data','Preprosessing Data','Mo
 
 with Data:
    st.title("""
-   Peramalan Data Time Series Pada Saham PT. Adaro Energy Tbk.
+   Peramalan Data Time Series Pada Saham PT PLN (Persero)
    """)
    st.write('Proyek Sain Data')
    st.text("""
@@ -24,7 +24,7 @@ with Data:
             """)
    st.subheader('Tentang Dataset')
    st.write ("""
-   Dataset yang digunakan adalah data time series pada Saham PT. Adaro Energy Tbk, datanya di dapatkan dari website pada link berikut ini.
+   Dataset yang digunakan adalah data time series pada Saham PT PLN (Persero), datanya di dapatkan dari website pada link berikut ini.
    """)
    st.write ("""
     Dataset yang digunakan berjumlah 248 data dan terdapat 7 atribut : 
