@@ -15,21 +15,21 @@ Data,Preproses,Modelling,Implementasi = st.tabs(['Data','Preprosessing Data','Mo
 
 with Data:
    st.title("""
-   Peramalan Data Time Series Pada Saham PT PLN (Persero)
+   Peramalan Data Time Series Pada Saham Perusahaan Listrik Negara (PLN) 
    """)
    st.write('Proyek Sain Data')
    st.text("""
             1. Muhammad Arbiansyafa Siswanto 200411100195 
-            2. Bachtiar Dwi Yusril R. 200411100118   
+            2. Yusril 2004111000118   
             """)
    st.subheader('Tentang Dataset')
    st.write ("""
-   Dataset yang digunakan adalah data time series pada Saham PT PLN (Persero), datanya di dapatkan dari website pada link berikut ini.
+   Dataset yang digunakan adalah data time series pada Saham Perusahaan Listrik Negara (PLN) , datanya di dapatkan dari website pada link berikut ini.
    """)
    st.write ("""
-    Dataset yang digunakan berjumlah 248 data dan terdapat 7 atribut : 
+    Dataset yang digunakan berjumlah 261 data dan terdapat 7 atribut : 
     """)
-   st.write('1. Date : berisi tanggal jalannya perdagangan mulai dari tanggal 15 juni 2022- 15 juni 2023')
+   st.write('1. Date : berisi tanggal jalannya perdagangan mulai dari tanggal 14 juni 2022- 14 juni 2023')
    st.write('2. Open : berisi Harga pembukaan pada hari tersebut')
    st.write('3. High : berisi Harga tertinggi pada hari tersebut')
    st.write('4. Low : berisi Harga terendah pada hari tersebut')
@@ -37,7 +37,7 @@ with Data:
    st.write('6. Adj. Close : berisi Harga penutupan yang disesuaikan dengan aksi korporasi seperti right issue, stock split atau stock reverset')
    st.write('7. Volume : berisi Volume perdagangan (dalam satuan lembar)')
    st.subheader('Dataset')
-   df = pd.read_csv('ADRO.JK.csv')
+   df = pd.read_csv('https://raw.githubusercontent.com/FajarAndrianto037/kelompokpro/main/PLN%3DX.csv')
    df
    st.write('Dilakukan Pengecekan data kosong (Missing Value)')
    st.write(df.isnull().sum())
@@ -227,12 +227,10 @@ with Implementasi:
       X_pred = model.predict([[(data1[0][0]),(data2[0][0]),(data3[0][0]),(data4[0][0])]])
       t_data1= X_pred.reshape(-1, 1)
       original = minmax.inverse_transform(t_data1)
-      hasil =f"Prediksi Hasil Peramalan Pada Harga Pembukaan Saham PT. Adaro Energy Tbk. adalah  : {original[0][0]}"
+      hasil =f"Prediksi Hasil Peramalan Pada Harga Pembukaan Perusahaan Listrik Negara (PLN)  adalah  : {original[0][0]}"
       st.success(hasil)
 
    all = st.button("Submit")
    if all :
       st.balloons()
       submit()
-
-
